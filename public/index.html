@@ -1,43 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+Invoice Generator Website
+Overview
+The Invoice Generator website allows users to create, review, and download invoices. It supports customization of
+invoice details including billing information, item descriptions, and more.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+Features
+Create Invoices: Input billing information, item details, and additional notes.
+Review Invoices: Preview the invoice before finalizing.
+Download Invoices: Download the generated invoice as a PDF file.
+Setup and Installation
+Frontend
+Clone the Repository:
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+git clone <repository-url>
+  cd <repository-directory>/frontend
+    Install Dependencies:
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-</html>
+    npm install
+    Environment Configuration:
+
+    Create a .env file in the root directory of the frontend.
+    Add your environment variables as needed.
+    Start the Development Server:
+
+    npm start
+    Backend
+    Navigate to Backend Directory:
+
+    cd <repository-directory>/backend
+      Install Dependencies:
+
+      npm install
+      Environment Configuration:
+
+      Create a .env file in the root directory of the backend.
+      Add your API key:
+      API_KEY=your_api_key_here
+      Start the Backend Server:
+
+      npm start
+      Usage
+      Access the Website:
+
+      Open http://localhost:3000 in your web browser during development.
+      Create an Invoice:
+
+      Fill in the billing information, items, and additional details in the form.
+      Review Invoice:
+
+      Click the "Review Invoice" button to preview the invoice.
+      Download Invoice:
+
+      Once satisfied, download the invoice as a PDF.
+      API Endpoints
+      Create Invoice:
+      URL: https://invoice-generator-qys7.onrender.com/api/create-invoice
+      Method: POST
+      Headers:
+      Content-Type: application/json
+      Authorization: Bearer <API_KEY>
+        Body: Invoice data in JSON format.
+        Website link - Invoice Generator
+        Images - image
